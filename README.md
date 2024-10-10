@@ -1,4 +1,2 @@
 # GifSearcherApp
-
-
-This is my web app for gif searching using an API
+This is my web app for gif searh using an API
