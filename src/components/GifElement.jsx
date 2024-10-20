@@ -1,9 +1,5 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
+import PropTypes from 'prop-types'
 
-
-
-// eslint-disable-next-line react/prop-types
 export const GifElement = ({ title, url }) => {
     return (
 
@@ -15,3 +11,7 @@ export const GifElement = ({ title, url }) => {
     );
 
 }
+GifElement.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+};

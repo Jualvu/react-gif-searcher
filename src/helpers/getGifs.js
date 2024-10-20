@@ -1,6 +1,8 @@
+import GIPHY_API from "../../config/apikey";
+
 export const getGifs = async (category) => {
 
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=4zGsbtJa2P1VwLqNjM4RT7YmdTPbDRrE&q=${category}&limit=10`;
+    const url = `${GIPHY_API}=${category}&limit=10`;
     const resp = await fetch(url);
     const { data } = await resp.json();
 

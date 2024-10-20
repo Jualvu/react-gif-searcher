@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types'
+
 import { GifElement } from './GifElement';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 
@@ -34,4 +33,7 @@ export const GifGrid = ({ categoryName }) => {
         </>
     );
 
+}
+GifGrid.propTypes = {
+    categoryName: PropTypes.string.isRequired,
 }

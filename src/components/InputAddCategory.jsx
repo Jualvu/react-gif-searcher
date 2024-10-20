@@ -1,5 +1,6 @@
-/* eslint-disable react/prop-types */
-import { useState } from 'react'
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+
 
 export const InputAddCategory = ({ onNewCategory }) => {
 
@@ -24,7 +25,7 @@ export const InputAddCategory = ({ onNewCategory }) => {
     }
 
     return (
-        <form onSubmit={(event) => onSubmit(event)}>
+        <form onSubmit={(event) => onSubmit(event)} aria-label='form'>
 
             <input
                 type='text'
@@ -38,4 +39,6 @@ export const InputAddCategory = ({ onNewCategory }) => {
     );
 
 }
-
+InputAddCategory.propTypes = {
+    onNewCategory: PropTypes.func.isRequired,
+}
